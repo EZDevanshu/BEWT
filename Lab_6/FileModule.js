@@ -1,16 +1,17 @@
+const { log } = require('console');
 const fs = require('fs')
 
 // 1) Write a Node.js program that uses fs.readFile() to read a file named data.txt asynchronously
 // and print its content on the console. (A)
 
-fs.readFile("data.txt" , (err , data)=>{
-    if(err){
-        console.log(err)
-    }
-    else{
-        console.log(data.toString());
-    }
-})
+// fs.readFile("data.txt" , (err , data)=>{
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log(data.toString());
+//     }
+// })
 
 // 2) Use fs.readFileSync() to read info.txt and print the content, Compare execution with the
 // asynchronous version. (A)

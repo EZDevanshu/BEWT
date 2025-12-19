@@ -41,16 +41,16 @@ const app = new Express();
 
 const fs = require('fs');
 
-app.get('/home', (req , res) => {
-    fs.readFile('../Lab_7/name.txt', 'utf8',  (err, data) => {
-        if (err) {
-            res.send(err);
-        }
-        else {
-            res.send(`<i>${data}</i>`)
-        }
-    })
-})
-app.listen(3000 , ()=>{
-    console.log(`server has started @ 3000`)
-})
+// app.get('/home', (req , res) => {
+//     fs.readFile('../Lab_7/name.txt', 'utf8',  (err, data) => {
+//         if (err) {
+//             res.send(err);
+//         }
+//         else {
+//             res.send(`<i>${data}</i>`)
+//         }
+//     })
+// })
+// app.listen(3000 , ()=>{
+//     console.log(`server has started @ 3000`)
+// })
