@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // array destructuring
+        var a = [1,2,3,4,5];
+
+        var [first , second , third  , ...a] = a;
+
+        console.log(first);
+        console.log(second);
+        console.log(...a);
+
+
+        // object destructuring
+
+        let name = {
+            "age":16,
+            "city":'acv'
+        }
+
+        var {age, city} = name;
+        
+        console.log(age);
+        console.log(city);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let  n = parseInt(prompt("Enter num : "));
+
+        let  a = 0;
+        let  b = 1;
+
+        if(n == 1){
+            alert("0");
+        }
+        if(n == 2 || n == 3){
+            alert("1");
+        }
+
+        for(i = 1 ; i <= n ; i++){
+            let temp = a + b;
+            a = b ;
+            b = temp;
+        }   
+
+        alert("ans : " +a);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let n = parseInt(prompt("Enter Number :"));
+        let temp = n;
+
+        let newNum = 0;
+        while(n < 10){
+            let rem = n % 10; 
+            n /= 10;
+            newNum = newNum*10 + rem;
+        }
+            newNum = newNum*10 + n;
+
+        if(newNum == temp){
+            alert("pelindrome");
+        }
+        else{
+            alert("not pelindrome");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter Num :"));
+        let temp = n;
+        let numOfDigits = parseInt(Math.log10(n) + 1);
+
+        let newNum = 0;
+        while(n != 0){
+            let r = n % 10;
+            n = parseInt(n / 10);
+            newNum = parseInt(Math.pow(r , numOfDigits)) + newNum;
+        }
+
+        if(newNum == temp){
+            alert("ture");
+        }
+        else{
+            alert("false");
+        }
+    </script>
+</body>
+</html>

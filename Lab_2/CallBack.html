@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abc(name , callback){
+            const msg = `hello ${name}`
+            callback(msg);
+        }
+
+        abc("Devanshu" , (msg) => {
+            console.log(msg);
+        });
+
+    </script>
+</body>
+</html>

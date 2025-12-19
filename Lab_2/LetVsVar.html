@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a = 39;
+        check();
+        function check(){
+            let a = 10;
+            console.log(a); // 10 (1)
+            check2();
+        }
+        console.log(a); // 39 (3)
+         
+        var b = 40;
+        function check2(){
+            var b = 20;
+            console.log(b); // 20 (2)
+        }
+        console.log(b); // 40 (4)
+        
+    </script>
+</body>
+</html>
