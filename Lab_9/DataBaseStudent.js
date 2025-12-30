@@ -11,7 +11,7 @@ mongoose.connect(DB_URL)
     .catch(err => console.error('connection error:', err));
 
 const StudentSchema = new mongoose.Schema({
-    name: String,
+    name: Number ,
     department: String,
     enrollDate: { type: Date, default: Date.now }
 });
@@ -53,3 +53,28 @@ app.get('/api/student/:id', async (req, res) => {
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
+
+// Delete 
+
+app.delete('/api/student/:id' , async (req , res )=>{
+    try{
+        await Student.findByIdAndDelete(req.params.id);
+        res.json({massage : "student deleted successfully!!"});
+    }
+    catch{
+        res.status(500).json({error : "server error"});
+    }
+})
+
+
+// Update 
+
+app.put('/api/student/:id' , async (req , res)=>{
+    try{    
+        const studentUpdate = Student.findByIdAndUpdate(req.params.id , res.body , { new : true})
+        res.json(studentUpdate);
+    }
+    catch{
+        res.status(500).json({error : "server error"})
+    }
+})
