@@ -71,7 +71,8 @@ app.put('api/faculty' , async (req , res)=>{
 
 app.delete('api/faculty' , async (req , res)=>{
     try{
-        await faculty.findByIdAndDelete(req.params.id)
+        const faculty = await faculty.findByIdAndDelete(req.params.id)
+        if(!faculty)return res.status(404).send("faculty not found")
         res.json({massage : "student was deleted"})
     }
     catch{  
