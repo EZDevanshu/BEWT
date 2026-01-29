@@ -34,9 +34,9 @@ app.post("/faculties" , async(req , res)=>{
 app.get('/faculies' , async (req , res)=>{
     try{
         const faculties = await Faculty.find();
-        res.status(200).json()(faculties)
+        res.status(200).json(faculties)
     }
     catch{
-        res.
+        res.sta(404).send()
     }
 })
