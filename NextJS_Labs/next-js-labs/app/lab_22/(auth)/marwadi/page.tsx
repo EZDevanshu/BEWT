@@ -1,9 +1,9 @@
 import React from 'react'
 
-function MarwadiPage() {
+function MUPage() {
   return (
-    <div>This is MarwadiPage</div>
+    <div>This is MUPage</div>
   )
 }
 
-export default MarwadiPage
+export default MUPage

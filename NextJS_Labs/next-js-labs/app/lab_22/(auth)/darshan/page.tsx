@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function DarshanPage() {
+function DUPage() {
   return (
-    <div>This is DarshanPage</div>
+    <div>This is DUPage</div>
   )
 }
+
+export default DUPage
