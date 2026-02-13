@@ -1,6 +1,6 @@
 import { removeRequestMeta } from "next/dist/server/request-meta";
 import { NextResponse } from "next/server";
-
+// static data
 const students = [
     {id : 1 , name : "Rahul" , course : "BCA"},
     {id : 2 , name : "Ajay" , course : "MCA"},
