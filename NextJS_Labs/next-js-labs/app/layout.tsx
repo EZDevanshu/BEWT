@@ -41,6 +41,7 @@ export default function RootLayout({
               <Link href = "/lab_22"className="m-5">Lab_22</Link>
               <Link href = "/lab_23"className="m-5">Lab_23</Link>
               <Link href = "/lab_24"className="m-5">Lab_24</Link>
+              <Link href = "/lab_25" className="m-5">Lab_25</Link>
           </div>
         </div>
         <div className="row">
