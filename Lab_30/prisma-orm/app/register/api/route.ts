@@ -1,5 +1,4 @@
 import prisma from "@/app/lib/prisma";
-import { RedirectType } from "next/navigation";
 import { NextResponse } from "next/server";
 
 async function POST(request : Request){
@@ -9,7 +8,6 @@ async function POST(request : Request){
         data : {
             userName : body.name ,
             email : body.email,
-            password : body.password
         }
     });
 
