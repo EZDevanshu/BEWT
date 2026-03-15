@@ -1,4 +1,3 @@
-import React from 'react'
 
 async function PrimeRange({params} :{params : Promise<{start : string , end : string}>}) {
  const { start, end } = await params;
