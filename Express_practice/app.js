@@ -44,7 +44,7 @@ app.get('/laptops/:id' , async(req, res)=>{
 })
 
 // update laptop
-app.get('/laptops/:id' , async (req, res)=>{
+app.put('/laptops/:id' , async (req, res)=>{
     const data = await Laptop.findByIdAndUpdate(
         req.params.id,
         res.body,
