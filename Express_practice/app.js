@@ -1,9 +1,56 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
 const app = express();
+app.use(express.json());
 
+mongoose.connect('data base url here')
+.then(()=> console.log("connect"))
+.catch(err => console.log(err));
 
-app.get('/', (req , res)=>{
-    res.send("hello world!!");
+const LaptopSchema = new mongoose.Schema({
+    LaptopID : Number,
+    LaptopName : String,
+    LaptopPrice : Number,
+    LaptopProcessor : String,
+    LaptopRAM : Number,
+})
+
+const Laptop = mongoose.model('Laptop' , LaptopSchema);
+
+// create 
+app.post('/laptops' , async (req ,res)=>{
+    const data = new Laptop(req.body);
+    await data.save();
+    res.send();
+})
+
+// get all laptops 
+app.get('/laptops' , async (req , res)=>{
+    const data = await Laptop.find();
+    res.send(data);
+})
+
+// get by id laptop
+app.get('/laptops/:id' , async(req, res)=>{
+    const data = await Laptop.findById(req.params.id);
+    res.send(data);
+})
+
+// update laptop
+app.get('/laptops/:id' , async (req, res)=>{
+    const data = await Laptop.findByIdAndUpdate(
+        req.params.id,
+        res.body,
+        {new : true},
+    );
+    res.send(data);
+});
+
+// delete laptop
+app.delete('/laptops/:id' , async(req, res)=>{
+    const data = await Laptop.findByIdAndDelete(req.params.id);
+    res.send("laptop deleted");
 })
 
 app.listen(3000 , ()=>{
