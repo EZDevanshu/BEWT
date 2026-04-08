@@ -18,11 +18,17 @@ const LaptopSchema = new mongoose.Schema({
 
 const Laptop = mongoose.model('Laptop' , LaptopSchema);
 
-// create 
+// insert laptops    
 app.post('/laptops' , async (req ,res)=>{
-    const data = new Laptop(req.body);
+    const data = new Laptop({
+        LaptopID : req.body.LaptopID,
+        LaptopName : req.body.LaptopName,
+        LaptopPrice : req.body.LaptopPrice,
+        LaptopProcessor : req.body.LaptopProcessor,
+        LaptopRAM : req.body.LaptopRAM,
+    });
     await data.save();
-    res.send();
+    res.send(data);
 })
 
 // get all laptops 
