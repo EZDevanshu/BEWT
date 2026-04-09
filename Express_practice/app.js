@@ -19,6 +19,7 @@ const LaptopSchema = new mongoose.Schema({
 const Laptop = mongoose.model('Laptop' , LaptopSchema);
 
 // insert laptops    
+// here we can also use create method 
 app.post('/laptops' , async (req ,res)=>{
     const data = new Laptop({
         LaptopID : req.body.LaptopID,
